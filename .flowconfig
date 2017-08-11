@@ -1,0 +1,24 @@
+[ignore]
+<PROJECT_ROOT>/blueprints/.*
+
+[include]
+node_modules/redux-create/flow-typed/
+
+[libs]
+node_modules/jss/flow-typed
+node_modules/fbjs/flow/lib
+
+[options]
+esproposal.class_instance_fields=enable
+esproposal.class_static_fields=enable
+module.name_mapper='.*\(.s?css$\)' -> 'empty/object'
+module.name_mapper='^\(.*\)\.\(jpg\|png\|gif\|eot\|otf\|webp\|svg\|ttf\|woff\|woff2\|mp4\|webm\)$' -> 'react-scripts/config/flow/file'
+module.name_mapper='^_api\/\(.*\)$' -> '<PROJECT_ROOT>/src/api/\1'
+module.name_mapper='^_components\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^_containers\/\(.*\)$' -> '<PROJECT_ROOT>/src/containers/\1'
+module.name_mapper='^_layouts\/\(.*\)$' -> '<PROJECT_ROOT>/src/layouts/\1'
+module.name_mapper='^_redux\/\(.*\)$' -> '<PROJECT_ROOT>/src/redux/\1'
+module.name_mapper='^_views\/\(.*\)$' -> '<PROJECT_ROOT>/src/views/\1'
+suppress_type=$FlowFixMe
+suppress_type=$FlowIssue
+unsafe.enable_getters_and_setters=true

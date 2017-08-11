@@ -1,0 +1,27 @@
+@import 'mixins';
+
+.SideNav {}
+
+.header {
+  @extend %flex-center;
+  align-items: flex-start;
+  border-bottom: $border;
+  height: 60px;
+  width: 300px;
+
+  .typography {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.logo {
+  margin-left: 25px;
+  height: 56px;
+  width: 124px;
+  fill: #2FA9FC;
+}
+
+.menuitem {
+  padding-left: 30px !important;
+}

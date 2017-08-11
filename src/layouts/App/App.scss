@@ -1,0 +1,18 @@
+@import 'mixins';
+
+.App {
+  width: 100%;
+  height: calc(100vh - #{$header-height});
+}
+
+.appBar {
+  height: $header-height;
+
+  .icon {
+    fill: white;
+  }
+}
+
+.content {
+  @extend %flex-center;
+}
